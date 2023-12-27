@@ -1,42 +1,43 @@
-# Quant-Winter-Camp-23-Assignment-3
+# Quant-Winter-Camp-23-Assignment-3 Simplified Instructions
 
-So for the assignment 3, you have to draft strategies using the single candlestick patterns. Try to combine as many candlestick patterns as possible and make strategies which you think would work best based on plotting the stock from the start period to the end period.
+For Assignment 3, your task is to create trading strategies using single candlestick patterns. Combine these patterns to design strategies that you believe will work well when plotting a stock from the beginning to the end of the specified period.
 
-Here are the metrics which you have to calculate:
+Here are the key things you need to do:
 
-1. Returns %: If you start off with $1000, and the final value becomes $2000, the returns % would be 100 (100*(2000-1000)/1000)
-2. Prepare a trade log( this should be a dataframe) containing the following columns:
-    ---> Entry index of a trade
-    ---> Exit index of a trade
-    ---> Duration of the trade
-    ---> Returns from the trade
-    ---> Max drawdown for the trade ( Max drawdown is defined as the max value of the portfolio value which goes against us. Let's say you entered the trade with $1000, that means you have a portfolio value of $1000 at the start. Let's say that during the trade the minimum
-   of the portfolio value attained is $800. So the Max drawdown for the trade would be (100*(1000-800)/1000) defined as (entry-min(portfolio_value))/entry.
-3. When you have calculated the max drawdown for each trade calculating the maximum drawdown for the whole strategy should be simple.
+1. **Calculate Returns %:**
+   If you start with $1000 and end up with $2000, calculate the returns percentage as \(100 \times \frac{(2000-1000)}{1000}\).
 
+2. **Create a Trade Log (DataFrame):**
+   Make a table (like a spreadsheet) with details for each trade:
+    - Entry index of a trade
+    - Exit index of a trade
+    - Duration of the trade
+    - Returns from the trade
+    - Max drawdown for the trade (the biggest drop in portfolio value during the trade).
 
-   It would be better to implement stop loss. A stop loss basically fixes the maximum loss which you can bear in a trade. It's your choice if you want to implement take profit. You are free to use any other risk management measure too. Risk management measures might reduce the returns but they work well in cutting down the drawdowns. Cutting down the drawdowns in important as whenever the portfolio value decreases a trader always feels unseasiness and wants to square off the trade feeling that his portfolio value does not decrease any further.
+3. **Maximum Drawdown for the Whole Strategy:**
+   Figure out the largest drop in value for the entire strategy based on individual trades.
 
-   While creating a strategy if you are at index i, you cannot use the stock data on index (i+1) as that is not available to you. The only data available to you is till the index i.
+It's a good idea to set up a stop loss, which is like a safety net to limit the biggest loss you're willing to take in a trade. You can choose to implement take profit or other risk management measures. While these measures might reduce profits, they help in avoiding big losses. This is important because when your portfolio value goes down, it can make you uneasy, and you might want to end the trade to prevent further losses.
 
-   Use the apple stock data( ticker='AAPL') with the start date=2018-01-01 and end date=2023-01-01.
+Remember, when creating a strategy at a certain point, you can't use stock data from the next point. You can only use data up to that point.
 
-  ** Use the data from yahoo finance.
+Use Apple stock data with the ticker 'AAPL' and the start date as '2018-01-01' and end date as '2023-01-01.'
 
-   !pip install yfinance
+**Use the data from Yahoo Finance.**
 
-   import yfinance as yf
+```python
+!pip install yfinance
+import yfinance as yf
 
-   apple=yf.download('AAPL',start date, end date)**
+apple = yf.download('AAPL', start='2018-01-01', end='2023-01-01')
+```
 
-   AAPL is the ticker symbol for AAPL. Attaching the documentation for yfinance along with some other useful resources.
+AAPL is just the code for Apple stock. Check out the yfinance documentation and explore additional resources to get a good grasp:
 
-   https://pypi.org/project/yfinance/
-   
-   https://zerodha.com/varsity/module/technical-analysis/
+- [yfinance Documentation](https://pypi.org/project/yfinance/)
+- [Technical Analysis Module - Varsity by Zerodha](https://zerodha.com/varsity/module/technical-analysis/)
+- [Candlestick Patterns - elearnmarkets](https://blog.elearnmarkets.com/spinning-tops-and-doji/)
+- [Hanging Man Pattern - Investopedia](https://www.investopedia.com/terms/h/hangingman.asp)
 
-   https://www.youtube.com/watch?v=K8lhUVwP60c
-
-   https://blog.elearnmarkets.com/spinning-tops-and-doji/
-
-   https://www.investopedia.com/terms/h/hangingman.asp
+These resources will help you understand technical analysis, candlestick patterns, and risk management to build effective trading strategies.
