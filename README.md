@@ -33,7 +33,7 @@ import yfinance as yf
 apple = yf.download('AAPL', start='2018-01-01', end='2023-01-01')
 ```
 
-AAPL is just the code for Apple stock. Check out the yfinance documentation and explore additional resources to get a good grasp:
+AAPL is just the ticker for Apple stock. Check out the yfinance documentation and explore additional resources to get a good grasp:
 
 - [yfinance Documentation](https://pypi.org/project/yfinance/)
 - [Technical Analysis Module - Varsity by Zerodha](https://zerodha.com/varsity/module/technical-analysis/)
