@@ -40,4 +40,4 @@ AAPL is just the code for Apple stock. Check out the yfinance documentation and 
 - [Candlestick Patterns - elearnmarkets](https://blog.elearnmarkets.com/spinning-tops-and-doji/)
 - [Hanging Man Pattern - Investopedia](https://www.investopedia.com/terms/h/hangingman.asp)
 
-These resources will help you understand technical analysis, candlestick patterns, and risk management to build effective trading strategies.
+This task will help you understand technical analysis, candlestick patterns, and risk management to build effective price action trading strategies.
